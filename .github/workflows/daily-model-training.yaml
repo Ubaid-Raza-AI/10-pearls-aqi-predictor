@@ -1,0 +1,30 @@
+name: Daily Model Training
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Midnight UTC
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: |
+          pip install -r requirements.txt
+      - run: python train_model.py
+        env:
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+          HOPSWORKS_PROJECT_NAME: ${{ secrets.HOPSWORKS_PROJECT_NAME }}
+      - run: python shap_analysis.py  # Run SHAP after training
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: trained-models-shap
+          path: |
+            aqi_model_*h/
+            images/
+            csv_files/
