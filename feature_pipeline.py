@@ -378,7 +378,7 @@ if __name__ == "__main__":
             print(f"Running recent mode: {start_date} to {end_date}")
         else:  # historical
             start_date = "2023-01-01"
-            end_date = "2025-11-06"
+            end_date = "2025-11-05"
             print(f"Running historical mode: {start_date} to {end_date}")
         
         df_features, feature_group = pipeline.run_pipeline(
