@@ -19,15 +19,15 @@
 ### Table of Contents
 
 - [Key Highlights](#key-highlights)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Project Structure](#-project-structure)
-- [Model Performance](#-model-performance)
-- [Feature Engineering](#-feature-engineering)
-- [Dashboard](#-dashboard)
-- [CI/CD Automation](#-cicd-automation)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Model Performance](#model-performance)
+- [Feature Engineering](#feature-engineering)
+- [Dashboard](#dashboard)
+- [CI/CD Automation](#cicd-automation)
 
 
 
